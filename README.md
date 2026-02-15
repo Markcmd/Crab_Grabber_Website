@@ -1,30 +1,44 @@
-# Crab_Grabber_Website
-
-Crab Grabber Website Plan
-
-Phase 1 — Define Purpose (Foundation)
-
-Clarify what the website must do.
-
-Minimum core goals
-	1.	Show menu
-	2.	Show location and hours
-	3.	Allow customers to join waitlist (QR scan)
-	4.	Allow customers to contact restaurant
-	5.	Mobile-friendly design
-
-Optional advanced goals
-	6.	Online ordering
-	7.	Table reservation
-	8.	SMS notifications (waitlist ready)
-	9.	Admin dashboard
-	10.	Analytics (customer visits, popular dishes)
+Below is a GitHub README-style version of the Crab Grabber website plan. It is structured, professional, and ready to paste into README.md.
 
 ⸻
 
-Phase 2 — Website Pages Structure
+Crab Grabber Restaurant Website
 
-Recommended pages:
+Official website and waitlist system for Crab Grabber, a seafood restaurant.
+This project provides a mobile-friendly website, QR-based waitlist system, and admin dashboard with SMS notification support.
+
+⸻
+
+Overview
+
+The website allows customers to:
+	•	View the menu
+	•	Join the waitlist via QR code
+	•	Receive SMS notifications when their table is ready
+	•	Find restaurant location and contact information
+
+It also provides an admin interface for staff to manage the waitlist.
+
+⸻
+
+Core Features
+
+Customer Features
+	•	View restaurant menu
+	•	Join waitlist from phone
+	•	Scan QR code to join instantly
+	•	Mobile-optimized interface
+	•	View restaurant hours and location
+
+Staff Features
+	•	View live waitlist
+	•	Update customer status
+	•	Notify customers via SMS
+	•	Manage waitlist efficiently
+
+⸻
+
+Website Structure
 
 /
 ├── Home
@@ -37,133 +51,72 @@ Recommended pages:
 
 ⸻
 
-Phase 3 — Core Features Breakdown
+Waitlist System
 
-1. Home Page
-
-Purpose: first impression
-
-Include:
-	•	Restaurant logo
-	•	Hero image
-	•	Short description
-	•	“Join Waitlist” button
-	•	“View Menu” button
-	•	Location + hours
-
-Example layout:
-
-[ Logo ]
-
-[ Big seafood image ]
-
-Crab Grabber
-Fresh Seafood • Live Crab • Cajun Boil
-
-[ Join Waitlist ]
-[ View Menu ]
-
-Open today: 11am – 10pm
-
-
-⸻
-
-2. Menu Page
-
-Structure:
-
-Categories:
-- Live Crab
-- Shrimp
-- Lobster
-- Combo
-- Drinks
-
-Each item:
+Customers enter:
 
 Name
-Price
-Image
-Description
+Phone Number
+Party Size
 
-
-⸻
-
-3. Waitlist Page (Critical Feature)
-
-This is your main business tool.
-
-Customer enters:
-
-Name
-Party size
-Phone number
-
-Press:
-
-Join Waitlist
-
-Server stores:
+Example record:
 
 {
-  id,
-  name,
-  phone,
-  partySize,
-  status,
-  time
+  "id": "uuid",
+  "name": "John",
+  "phone": "+16265551234",
+  "partySize": 4,
+  "status": "waiting",
+  "createdAt": "2026-02-15T18:00:00Z"
 }
+
+Status values:
+
+waiting
+notified
+seated
+cancelled
 
 
 ⸻
 
-4. QR Code Integration
+QR Code Integration
 
-Customer scans QR code at restaurant entrance.
-
-QR code points to:
+QR code directs customers to:
 
 https://crabgrabber.com/waitlist
 
-Customer joins waitlist without staff help.
+Benefits:
+	•	No physical line
+	•	Faster customer flow
+	•	Reduced staff workload
 
 ⸻
 
-5. SMS Notification System
+SMS Notification
 
-When table ready:
+When table is ready, staff sends notification:
 
-Admin clicks:
+Example message:
 
-Notify Customer
+Crab Grabber: Your table is ready. Please come to the front desk.
 
-Customer receives SMS:
+Powered by:
 
-Crab Grabber: Your table is ready. Please come to front desk.
+Twilio SMS API
 
 
 ⸻
 
-Phase 4 — Technology Stack Recommendation
-
-Since you already use:
-	•	Node.js
-	•	EC2
-	•	Nginx
-
-Recommended stack:
+Tech Stack
 
 Frontend
-
-Simple and fast:
-
-Option A (recommended)
 
 HTML
 CSS
 JavaScript
 
-Option B (advanced)
+Optional upgrade:
 
 React
 
@@ -172,132 +125,187 @@ React
 
 Backend
 
-Use your existing system:
-
 Node.js
-Express
+Express.js
 
 
 ⸻
 
 Database
 
-Start simple:
+Initial:
 
 SQLite
 
-Upgrade later:
+Production:
 
 PostgreSQL
 
 
 ⸻
 
-SMS service
+Server
 
-Use:
+AWS EC2
+Nginx
+Ubuntu
 
-Twilio
-
-Industry standard.
 
 ⸻
 
-Phase 5 — System Architecture
+External Services
+
+Twilio (SMS)
+
+
+⸻
+
+System Architecture
 
 Customer Phone
       ↓
-Website (Frontend)
+Frontend Website
       ↓
-Node.js Server
+Node.js Backend API
       ↓
 Database
-
-Admin Panel
       ↓
-Send SMS via Twilio
+Admin Dashboard
+      ↓
+Twilio SMS
 
 
 ⸻
 
-Phase 6 — Domain and Deployment
+API Endpoints (Planned)
 
-Example:
+Join waitlist
+
+POST /api/waitlist
+
+Request:
+
+{
+  "name": "John",
+  "phone": "+16265551234",
+  "partySize": 4
+}
+
+
+⸻
+
+Get waitlist
+
+GET /api/waitlist
+
+
+⸻
+
+Update status
+
+PATCH /api/waitlist/:id
+
+
+⸻
+
+Send notification
+
+POST /api/notify/:id
+
+
+⸻
+
+Project Structure
+
+crab-grabber/
+│
+├── frontend/
+│   ├── index.html
+│   ├── menu.html
+│   ├── waitlist.html
+│   ├── admin.html
+│   ├── css/
+│   └── js/
+│
+├── backend/
+│   ├── server.js
+│   ├── routes/
+│   ├── controllers/
+│   └── database/
+│
+├── nginx/
+│
+└── README.md
+
+
+⸻
+
+Deployment
+
+Domain:
 
 crabgrabber.com
 
-Host on your EC2 (same as learnwise API)
-
-Nginx config example:
+Example architecture:
 
 crabgrabber.com → frontend
 api.crabgrabber.com → backend
 
+Hosted on:
+
+AWS EC2
+
 
 ⸻
 
-Phase 7 — Minimum Viable Product (MVP)
+Development Roadmap
 
-Build in this order:
+Phase 1 — MVP
+	•	Home page
+	•	Menu page
+	•	Waitlist page
+	•	Backend API
+	•	Admin dashboard
 
-Step 1:
-Home page
+Phase 2 — SMS Integration
+	•	Twilio integration
+	•	Send notification button
 
-Step 2:
-Menu page
-
-Step 3:
-Waitlist page
-
-Step 4:
-Backend API
-
-Step 5:
-Admin page
-
-Step 6:
-SMS integration
+Phase 3 — Production Deployment
+	•	Domain setup
+	•	Nginx configuration
+	•	HTTPS
 
 ⸻
 
-Phase 8 — Future Expansion
-
-Possible upgrades:
+Future Improvements
 	•	Online ordering
-	•	Payment
-	•	Table reservation calendar
-	•	Kitchen dashboard
+	•	Payment integration
+	•	Reservation system
 	•	Customer accounts
 	•	Loyalty system
+	•	Analytics dashboard
 
 ⸻
 
-Recommended Development Timeline
+Goals
 
-Realistic timeline for one developer:
-
-Day 1–2: Frontend pages
-Day 3–4: Backend API
-Day 5: Waitlist system
-Day 6: Admin dashboard
-Day 7: SMS integration
-Day 8: Deployment
-
+Primary goals:
+	•	Improve customer experience
+	•	Reduce wait time confusion
+	•	Improve restaurant efficiency
+	•	Enable mobile waitlist via QR code
 
 ⸻
 
-Next Step
+License
 
-Choose one to start:
+Private project — Crab Grabber Restaurant
 
-Option A:
-Design UI structure
+⸻
 
-Option B:
-Build backend waitlist API
-
-Option C:
-Build full architecture diagram specific to your EC2 server
-
-Option D:
-Generate production-ready starter project structure
+If needed, a complete production-ready starter template can also be generated with:
+	•	frontend files
+	•	backend API
+	•	database setup
+	•	admin dashboard
