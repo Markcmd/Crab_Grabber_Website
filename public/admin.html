@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin — Crab Grabber</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div>Crab Grabber</div>
+        <span class="badge">Admin</span>
+      </div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/waitlist">Waitlist</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>Waitlist Dashboard</h1>
+      <p>Enter admin token to view and manage the queue.</p>
+    </div>
+
+    <div class="card">
+      <div class="form">
+        <input class="input" id="token" placeholder="Admin token (X-Admin-Token)" />
+        <div class="btns">
+          <button class="btn primary" id="refresh">Refresh</button>
+        </div>
+        <div class="small" id="msg"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h2>Active Waitlist</h2>
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th>Party</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="small" id="empty"></div>
+    </div>
+
+    <div class="footer">Security note: MVP uses a shared admin token. Upgrade later to login.</div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
