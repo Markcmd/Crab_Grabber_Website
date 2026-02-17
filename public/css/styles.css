@@ -18,9 +18,15 @@
     margin:0;
     font-family:var(--font);
     color:var(--text);
-    background: radial-gradient(1000px 600px at 20% 0%, rgba(45,212,191,.15), transparent 60%),
-                radial-gradient(900px 500px at 80% 20%, rgba(255,107,53,.18), transparent 60%),
-                var(--bg);
+  
+    /* Background image (file path: public/img/bg.jpg) */
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.045), rgba(0,0,0,.55)),
+      url("../img/bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   a{color:inherit;text-decoration:none}
