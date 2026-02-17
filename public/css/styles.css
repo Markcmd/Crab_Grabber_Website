@@ -22,7 +22,7 @@
     /* Background image (file path: public/img/bg.jpg) */
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.045), rgba(0,0,0,.55)),
-      url("../img/bg.webp");
+      url("./../img/bg.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
