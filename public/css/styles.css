@@ -106,3 +106,8 @@
   .pill.seated{border-color:rgba(148,163,184,.45);color:#e2e8f0;background:rgba(148,163,184,.08)}
   
   .footer{margin-top:16px;color:var(--muted);font-size:13px}
+
+  .links a.active {
+    background: var(--accent);
+    color: white;
+  }
