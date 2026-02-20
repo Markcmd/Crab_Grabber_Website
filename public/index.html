@@ -10,16 +10,21 @@
   <div class="container">
     <div class="nav">
       <div class="brand">
-        <div>Crab Grabber</div>
-        <span class="badge">Seafood • Cajun Boil</span>
+        <img src="./img/logo.jpg" alt="Crab Grabber Logo" class="logo"/>
+        <div data-i18n="brand_name">Crab Grabber</div>
       </div>
       <div class="links">
-        <a href="./index.html" class="active">Home</a>
-        <a href="./menu.html">Menu</a>
-        <a href="./about.html">About Us</a>
-        <a href="./contact.html">Contact & Location</a>
+        <a href="./index.html" class="active" data-i18n="nav_home">Home</a>
+        <a href="./menu.html" data-i18n="nav_menu">Menu</a>
+        <a href="./about.html" data-i18n="nav_about">About Us</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact & Location</a>
+        <button class="lang-toggle" id="langToggle" type="button">中文</button>
       </div>
     </div>
+
+    <div class="footer" data-i18n="footer_copy">© 2026 Crab Grabber. All rights reserved.</div>
   </div>
+
+  <script src="./js/i18n.js"></script>
 </body>
 </html>

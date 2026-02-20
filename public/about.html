@@ -12,83 +12,72 @@
     <!-- Navigation -->
     <div class="nav">
       <div class="brand">
-        <div>Crab Grabber</div>
-        <span class="badge">About Us</span>
+        <img src="./img/logo.jpg" alt="Crab Grabber Logo" class="logo"/>
+        <div data-i18n="brand_name"></div>
       </div>
       <div class="links">
-        <a href="./index.html">Home</a>
-        <a href="./menu.html">Menu</a>
-        <a href="./about.html" class="active">About Us</a>
-        <a href="./contact.html">Contact & Location</a>
+        <a href="./index.html" data-i18n="nav_home"></a>
+        <a href="./menu.html" data-i18n="nav_menu"></a>
+        <a href="./about.html" data-i18n="nav_about" class="active"></a>
+        <a href="./contact.html" data-i18n="nav_contact"></a>
+        <button class="lang-toggle" id="langToggle" type="button"></button>
       </div>
     </div>
 
     <!-- Hero -->
     <div class="hero">
-      <h1>Our Story</h1>
-      <p>
-        Crab Grabber was founded with a simple mission: bring fresh, bold, and unforgettable seafood experiences to our community.
-        Inspired by coastal seafood markets and Cajun boil traditions, we focus on quality ingredients, authentic flavors, and a welcoming atmosphere.
-      </p>
+      <h1 data-i18n="about_title"></h1>
+      <p data-i18n="about_p1"></p>
     </div>
 
     <!-- Story Section -->
     <div class="grid" style="margin-top:14px">
 
       <div class="card">
-        <h2>Freshness First</h2>
-        <div class="small">
-          We source seafood daily to ensure peak freshness and flavor. Our live tanks and careful handling guarantee the highest quality crab,
-          shrimp, lobster, and shellfish available.
-        </div>
+        <h2 data-i18n="about_fresh_title"></h2>
+        <div class="small" data-i18n="about_fresh_body"></div>
       </div>
 
       <div class="card">
-        <h2>Authentic Cajun Experience</h2>
-        <div class="small">
-          Our house blend seasoning combines traditional Cajun spices with our signature flavors, creating a bold and unforgettable taste.
-          Every boil is customizable to your preferred spice level.
-        </div>
+        <h2 data-i18n="about_cajun_title"></h2>
+        <div class="small" data-i18n="about_cajun_body"></div>
       </div>
 
     </div>
 
     <!-- Mission -->
     <div class="card" style="margin-top:14px">
-      <h2>Our Mission</h2>
-      <div class="small">
-        Our mission is to create a place where friends and family gather to enjoy fresh seafood, celebrate special moments, and create lasting memories.
-        We believe food should bring people together.
-      </div>
+      <h2 data-i18n="about_mission_title"></h2>
+      <div class="small" data-i18n="about_mission_body"></div>
     </div>
 
     <!-- Why Choose Us -->
     <div class="card" style="margin-top:14px">
-      <h2>Why Choose Crab Grabber</h2>
+      <h2 data-i18n="about_why_title"></h2>
 
       <table class="table">
         <thead>
           <tr>
-            <th>Feature</th>
-            <th>Description</th>
+            <th data-i18n="about_th_feature"></th>
+            <th data-i18n="about_th_description"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><b>Fresh Seafood</b></td>
-            <td>Delivered daily and prepared to order</td>
+            <td><b data-i18n="about_feature_fresh"></b></td>
+            <td data-i18n="about_feature_fresh_desc"></td>
           </tr>
           <tr>
-            <td><b>Custom Boils</b></td>
-            <td>Choose spice level, seasoning, and add-ons</td>
+            <td><b data-i18n="about_feature_custom"></b></td>
+            <td data-i18n="about_feature_custom_desc"></td>
           </tr>
           <tr>
-            <td><b>Family Friendly</b></td>
-            <td>Perfect for gatherings and celebrations</td>
+            <td><b data-i18n="about_feature_family"></b></td>
+            <td data-i18n="about_feature_family_desc"></td>
           </tr>
           <tr>
-            <td><b>Fast Service</b></td>
-            <td>Efficient waitlist system and quick seating</td>
+            <td><b data-i18n="about_feature_fast"></b></td>
+            <td data-i18n="about_feature_fast_desc"></td>
           </tr>
         </tbody>
       </table>
@@ -97,21 +86,19 @@
 
     <!-- Visit Us -->
     <div class="card" style="margin-top:14px">
-      <h2>Visit Us</h2>
-      <div class="small">
-        We welcome you to experience Crab Grabber and enjoy the best seafood in town.
-        Join our waitlist online or visit us in person.
-      </div>
+      <h2 data-i18n="about_visit_title"></h2>
+      <div class="small" data-i18n="about_visit_body"></div>
 
       <div class="btns" style="margin-top:10px">
-        <a href="./menu.html" class="btn primary">View Menu</a>
-        <a href="./waitlist.html" class="btn">Join Waitlist</a>
+        <a href="./menu.html" class="btn primary" data-i18n="btn_view_menu"></a>
+        <a href="./waitlist.html" class="btn" data-i18n="btn_join_waitlist"></a>
       </div>
 
     </div>
 
-    <div class="footer">© Crab Grabber</div>
+    <div class="footer" data-i18n="footer_copy"></div>
 
   </div>
+  <script src="./js/i18n.js"></script>
 </body>
 </html>
