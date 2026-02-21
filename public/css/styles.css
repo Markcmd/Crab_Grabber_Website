@@ -45,6 +45,7 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap: 12px;
 
   padding:14px 18px;
   border-bottom:1px solid var(--border);
@@ -54,7 +55,7 @@
 
   box-shadow: var(--shadow);
 }
-.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px;flex:0 0 auto}
 .logo{
   height:42px;          /* control size here */
   width:42px;           /* keep equal to height for perfect circle */
@@ -66,7 +67,23 @@
     padding:4px 10px;border-radius:999px;background:rgba(255,107,53,.15);
     border:1px solid rgba(255,107,53,.30);color:#ffd3c4;font-size:12px
   }
-  .links{display:flex;gap:14px;font-weight:600;color:var(--muted)}
+  .links{
+  display:flex;
+  gap:14px;
+  font-weight:600;
+  color:var(--muted);
+
+  /* allow horizontal sliding when space is tight */
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  white-space: nowrap;
+  max-width: 100%;
+}
+.links::-webkit-scrollbar{display:none}
+.links > a,
+.links > button{flex:0 0 auto}
   .links a{padding:8px 10px;border-radius:12px}
   .links a:hover{background:rgba(255,255,255,.06)}
   
