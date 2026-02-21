@@ -1,0 +1,27 @@
+name: Cache Bust Assets
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  cachebust:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Replace __BUILD__ with commit SHA
+        run: |
+          SHA=${GITHUB_SHA::8}
+          for f in public/*.html; do
+            sed -i "s/__BUILD__/$SHA/g" "$f"
+          done
+
+      - name: Commit updated version
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/*.html
+          git commit -m "auto: cache bust assets" || echo "No changes"
+          git push
