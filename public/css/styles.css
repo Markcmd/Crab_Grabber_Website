@@ -50,7 +50,7 @@
 
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
   gap: 12px;
 
   padding:14px 18px;
@@ -75,6 +75,7 @@
   }
   .links{
   display:flex;
+  margin-left:auto; /* push nav links to right side */
   gap:14px;
   font-weight:600;
   color:var(--muted);
@@ -116,10 +117,22 @@
   
   .btns{display:flex;gap:10px;flex-wrap:wrap}
   .btn{
-    appearance:none;border:1px solid var(--border);
-    padding:11px 14px;border-radius:14px;
+    appearance:none;
+    border:1px solid var(--border);
+    padding:11px 18px;
+    border-radius:14px;
     background:rgba(255,255,255,.06);
-    color:var(--text);font-weight:700;cursor:pointer
+    color:var(--text);
+    font-weight:700;
+    cursor:pointer;
+
+    /* prevent text cutting and allow auto sizing */
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:auto;
+    max-width:100%;
+    white-space:nowrap;
   }
   .btn.primary{
     background:rgba(255,107,53,.18);
@@ -164,8 +177,21 @@
 }
 
 .links a.active {
-  background: var(--accent);
-  color: white;
+  color: #ffffff;
+  background: #ff6b2c;
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+
+/* Mobile: show the active page in the top bar */
+.active-indicator{
+  display:none; /* desktop hidden */
+  padding:8px 12px;
+  border-radius:12px;
+  background:#ff6b2c;
+  color:#ffffff;
+  font-weight:700;
+  white-space:nowrap;
 }
 
 .lang-toggle{
@@ -204,6 +230,16 @@
     flex:0 0 auto;
   }
 
+  .active-indicator{
+    display:block;
+    margin-left:auto;      /* push to right side */
+    margin-right:8px;      /* small gap before hamburger */
+    flex:0 0 auto;
+    max-width: 55vw;
+    overflow:hidden;
+    text-overflow: ellipsis;
+  }
+
   .links{
     position: fixed;
     top: 64px; /* below navbar */
@@ -234,6 +270,11 @@
   .links a,
   .links button{
     width:100%;
+  }
+
+  .btn{
+    width:100%;
+    white-space:normal;
   }
 
 }
