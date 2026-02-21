@@ -16,11 +16,12 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Replace __BUILD__ with commit SHA
+      - name: Replace asset version with commit SHA
         run: |
           SHA=${GITHUB_SHA::8}
           for f in public/*.html; do
-            sed -i "s/__BUILD__/$SHA/g" "$f"
+            # Replace any existing ?v=... or __BUILD__ with current SHA
+            sed -i -E "s/(\?v=)(__BUILD__|[a-f0-9]+)/\1$SHA/g" "$f"
           done
 
       - name: Commit updated version
