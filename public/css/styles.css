@@ -15,18 +15,24 @@
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
-    margin:0;
+    /* margin:0;
     font-family:var(--font);
-    color:var(--text);
+    color:var(--text); */
   
     /* Background image (file path: public/img/bg.jpg) */
-    background:
+    /* background:
       linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,.35)),
       url("../img/bg_2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    margin:0;
+    font-family:var(--font);
+    color:var(--text);
+    background: #ffffff;
+
+
   }
   
   a{color:inherit;text-decoration:none}

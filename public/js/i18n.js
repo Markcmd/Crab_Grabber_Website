@@ -26,35 +26,13 @@
         // About page
         about_title: "Our Story",
         about_p1:
-          "Crab Grabber was founded with a simple mission: bring fresh, bold, and unforgettable seafood experiences to our community. Inspired by coastal seafood markets and Cajun boil traditions, we focus on quality ingredients, authentic flavors, and a welcoming atmosphere.",
-        about_fresh_title: "Freshness First",
-        about_fresh_body:
-          "We source seafood daily to ensure peak freshness and flavor. Our live tanks and careful handling help deliver high quality crab, shrimp, lobster, and shellfish.",
-        about_cajun_title: "Authentic Cajun Experience",
-        about_cajun_body:
-          "Our house blend seasoning combines traditional Cajun spices with our signature flavors. Every boil is customizable to your preferred spice level.",
+        "With over 40 years of restaurant experience, Ms. Cheng founded Crab Grabber to bring the community a unique seafood experience that blends the best of Eastern and Western flavors. Her vision is to create a place where tradition, innovation, and fresh ingredients come together to deliver unforgettable meals.",
         about_mission_title: "Our Mission",
         about_mission_body:
           "Create a place where friends and family gather to enjoy fresh seafood, celebrate special moments, and create lasting memories.",
-        about_why_title: "Why Choose Crab Grabber",
         about_visit_title: "Visit Us",
         about_visit_body:
           "We welcome you to experience Crab Grabber and enjoy the best seafood in town. Join our waitlist online or visit us in person.",
-        about_th_feature: "Feature",
-        about_th_description: "Description",
-        
-        about_feature_fresh: "Fresh Seafood",
-        about_feature_fresh_desc: "Delivered daily and prepared to order",
-        
-        about_feature_custom: "Custom Boils",
-        about_feature_custom_desc: "Choose spice level, seasoning, and add-ons",
-        
-        about_feature_family: "Family Friendly",
-        about_feature_family_desc: "Perfect for gatherings and celebrations",
-        
-        about_feature_fast: "Fast Service",
-        about_feature_fast_desc: "Efficient waitlist system and quick seating",
-
 
         // Contact page
         contact_title: "Visit Crab Grabber",
@@ -113,34 +91,13 @@
         // About page
         about_title: "我们的故事",
         about_p1:
-          "Crab Grabber 的目标很简单：为社区带来新鲜、浓郁、难忘的海鲜体验。我们结合海边海鲜市场与卡真煮锅传统，坚持优质食材、地道风味与温暖的用餐氛围。",
-        about_fresh_title: "新鲜优先",
-        about_fresh_body:
-          "我们每日采购海鲜，确保最佳新鲜度与口感。活鲜水箱与严格处理流程，帮助呈现高品质的螃蟹、虾、龙虾与贝类。",
-        about_cajun_title: "地道卡真体验",
-        about_cajun_body:
-          "我们的招牌混合香料融合传统卡真风味与独家配方。每份煮锅都可按你的辣度偏好定制。",
+          "拥有40年餐饮经营经验的程女士，创立了 Crab Grabber，希望为社区带来不一样的中西结合的美味海鲜体验。她致力于将传统、创新与新鲜食材结合，为每一位顾客创造难忘的用餐体验。",
         about_mission_title: "我们的使命",
         about_mission_body:
           "打造一个让朋友与家人相聚的地方：享用新鲜海鲜、庆祝重要时刻、留下美好回忆。",
-        about_why_title: "为什么选择 Crab Grabber",
         about_visit_title: "欢迎光临",
         about_visit_body:
           "欢迎来 Crab Grabber 体验本地高品质海鲜。你可以在线加入等位，或直接到店用餐。",
-        about_th_feature: "特点",
-        about_th_description: "说明",
-        
-        about_feature_fresh: "新鲜海鲜",
-        about_feature_fresh_desc: "每日配送，新鲜现做",
-        
-        about_feature_custom: "自定义煮锅",
-        about_feature_custom_desc: "可选择辣度、调味和配料",
-        
-        about_feature_family: "适合家庭",
-        about_feature_family_desc: "适合聚会与庆祝",
-        
-        about_feature_fast: "快速服务",
-        about_feature_fast_desc: "高效等位系统与快速入座",
 
         // Contact page
         contact_title: "欢迎光临 Crab Grabber",
