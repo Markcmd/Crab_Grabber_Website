@@ -174,3 +174,60 @@
 .lang-toggle:hover{
   background: rgba(255,255,255,.90);
 }
+
+
+/* =============================
+   Mobile hamburger menu support
+   ============================= */
+
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  padding:6px 10px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,.10);
+  background:rgba(255,255,255,.75);
+  cursor:pointer;
+}
+
+/* mobile layout */
+@media (max-width: 640px){
+
+  .menu-toggle{
+    display:block;
+    flex:0 0 auto;
+  }
+
+  .links{
+    position: fixed;
+    top: 64px; /* below navbar */
+    right: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 220px;
+
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(10px);
+
+    border-left:1px solid var(--border);
+
+    padding:12px;
+
+    transform: translateX(100%);
+    transition: transform .25s ease;
+
+    box-shadow: var(--shadow);
+  }
+
+  .links.open{
+    transform: translateX(0);
+  }
+
+  .links a,
+  .links button{
+    width:100%;
+  }
+
+}

@@ -11,14 +11,18 @@
     <div class="nav">
       <div class="brand">
         <img src="./img/logo.jpg" alt="Crab Grabber Logo" class="logo"/>
-        <div data-i18n="brand_name">Crab Grabber</div>
+        <div data-i18n="brand_name"></div>
       </div>
-      <div class="links">
-        <a href="./index.html" data-i18n="nav_home">Home</a>
-        <a href="./menu.html" class="active" data-i18n="nav_menu">Menu</a>
-        <a href="./about.html" data-i18n="nav_about">About Us</a>
-        <a href="./contact.html" data-i18n="nav_contact">Contact & Location</a>
-        <button class="lang-toggle" id="langToggle" type="button">中文</button>
+
+      <!-- Hamburger button (mobile) -->
+      <button class="menu-toggle" id="menuToggle" type="button">☰</button>
+
+      <div class="links" id="navLinks">
+        <a href="./index.html" data-i18n="nav_home"></a>
+        <a href="./menu.html" class="active" data-i18n="nav_menu"></a>
+        <a href="./about.html" data-i18n="nav_about"></a>
+        <a href="./contact.html" data-i18n="nav_contact"></a>
+        <button class="lang-toggle" id="langToggle" type="button"></button>
       </div>
     </div>
 
@@ -38,8 +42,9 @@
       <img src="./img/menu_2.jpg" alt="Crab Grabber Menu Page 2" style="width:100%; border-radius:12px; margin-top:10px;"/>
     </div>
 
-    <div class="footer" data-i18n="footer_copy">© 2026 Crab Grabber. All rights reserved.</div>
+    <div class="footer" data-i18n="footer_copy"></div>
   </div>
   <script src="./js/i18n.js"></script>
+  <script src="./js/nav.js"></script>
 </body>
 </html>
