@@ -73,7 +73,7 @@
         nav_menu: "菜单",
         nav_about: "关于我们",
         nav_contact: "联系与地址",
-        brand_name: "Crab Grabber",
+        brand_name: "Crab Grabber (手抓海鲜)",
         home_badge: "海鲜 • 卡真风味",
 
         // Common buttons
@@ -91,7 +91,7 @@
         // About page
         about_title: "我们的故事",
         about_p1:
-          "拥有40年餐饮经营经验的程女士，创立了 Crab Grabber，希望为社区带来不一样的中西结合的美味海鲜体验。她致力于将传统、创新与新鲜食材结合，为每一位顾客创造难忘的用餐体验。",
+          "拥有40年餐饮经营经验的程女士，创立了 Crab Grabber（手抓海鲜），希望为社区带来不一样的中西结合的美味海鲜体验。她致力于将传统、创新与新鲜食材结合，为每一位顾客创造难忘的用餐体验。",
         about_mission_title: "我们的使命",
         about_mission_body:
           "打造一个让朋友与家人相聚的地方：享用新鲜海鲜、庆祝重要时刻、留下美好回忆。",
